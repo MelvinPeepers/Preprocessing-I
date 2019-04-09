@@ -1,3 +1,36 @@
+/*************************************************
+**************************************************
+@font-face 
+***************************************************
+**************************************************/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/****************************************************
+*****************************************************
+
+Variables
+
+*****************************************************
+*****************************************************/
+/****************************************************
+*****************************************************
+
+Mixins
+
+*****************************************************
+*****************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -133,5 +166,213 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+  background-color: #262932;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/****************************************************
+*****************************************************
+
+Header
+
+*****************************************************
+*****************************************************/
+header {
+  width: 900px;
+  height: 100px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+nav a {
+  padding-right: 45px;
+  text-decoration: none;
+  color: #fff;
+}
+nav a:last-child {
+  padding-right: 0;
+}
+nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/****************************************************
+*****************************************************
+
+top-content-bg-img
+
+*****************************************************
+*****************************************************/
+.top-content {
+  background-color: #f2f2f2;
+  width: 900px;
+  margin: 0 auto;
+  color: #262932;
+  border-radius: 4px;
+}
+.top-content-bg-img img {
+  max-width: 100%;
+  height: auto;
+  margin: 40px 0 10px 20px;
+  border-radius: 4px;
+}
+.top-content-bg-img h1 {
+  font-size: 32px;
+  font-weight: 700;
+  width: 96%;
+  margin: 0 auto;
+  color: #2C982A;
+}
+.top-content-bg-img p {
+  width: 96%;
+  margin: 10px auto;
+}
+.top-content-bg-img button {
+  background-color: #2C982A;
+  color: #fff;
+  margin: 0 0 20px 20px;
+  border-radius: 4px;
+  padding: 8px 32px;
+}
+/****************************************************
+*****************************************************
+
+about-section
+
+*****************************************************
+*****************************************************/
+.about-section {
+  margin: 20px auto;
+  width: 900px;
+  border-bottom: 1px solid #2C982A;
+}
+.about-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C982A;
+  width: 96%;
+  margin: 0 auto;
+}
+.about-section p {
+  width: 96%;
+  margin: 15px auto;
+}
+/****************************************************
+*****************************************************
+
+eduction-section
+
+*****************************************************
+*****************************************************/
+.eduction-section {
+  margin: 20px auto;
+  width: 900px;
+  border-bottom: 1px solid #2C982A;
+}
+.eduction-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C982A;
+  width: 96%;
+  margin: 0 auto;
+}
+.eduction-section a li {
+  text-decoration: none;
+  color: #fff;
+  width: 96%;
+  margin: 15px auto;
+}
+.eduction-section a li:hover {
+  text-decoration: underline;
+  color: #2C982A;
+}
+/****************************************************
+*****************************************************
+
+work-history
+
+*****************************************************
+*****************************************************/
+.work-history {
+  margin: 20px auto;
+  width: 900px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2C982A;
+}
+.work-history h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2C982A;
+  width: 96%;
+  margin: 15px auto;
+}
+.work-history table {
+  width: 96%;
+  margin: 0 auto;
+}
+.work-history th {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2C982A;
+  padding-bottom: 10px;
+}
+.work-history tr {
+  width: 900px;
+}
+.work-history td {
+  padding: 10px 10px 10px 10px;
+}
+.bg-color-table {
+  background-color: #f2f2f2;
+  color: #262932;
+  margin: 10px 10px;
+}
+/****************************************************
+*****************************************************
+
+contact-section
+
+*****************************************************
+*****************************************************/
+.contact-section {
+  margin: 20px auto;
+  width: 900px;
+  padding-bottom: 20px;
+}
+.contact-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C982A;
+  width: 96%;
+  margin: 0 auto;
+}
+.contact-section a li {
+  text-decoration: none;
+  color: #fff;
+  width: 96%;
+  margin: 15px auto;
+}
+.contact-section a li:hover {
+  color: #2C982A;
+}
+/****************************************************
+*****************************************************
+
+footer
+
+*****************************************************
+*****************************************************/
+footer {
+  margin: 20px auto;
+  width: 900px;
+  text-align: center;
+  background-color: #2C982A;
+  padding: 20px;
 }
