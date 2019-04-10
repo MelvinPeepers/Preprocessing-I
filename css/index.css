@@ -361,8 +361,10 @@ skills-section
   text-align: center;
 }
 .skills-section a:hover {
+  text-decoration: underline;
   color: #2C982A;
   cursor: pointer;
+  text-decoration: none;
 }
 /****************************************************
 *****************************************************
@@ -399,6 +401,7 @@ work-history
   font-weight: 700;
   color: #2C982A;
   width: 96%;
+  margin: 0 auto;
   margin: 15px auto;
 }
 .work-history table {

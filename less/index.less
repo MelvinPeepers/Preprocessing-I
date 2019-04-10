@@ -51,6 +51,19 @@ Mixins
 *****************************************************
 *****************************************************/
 
+.h2-props() {
+	font-size: @h2-fonts;
+	font-weight: 700;
+	color: @button-bg-color;
+	width: 96%;
+	margin: 0 auto;
+}
+
+.hover-effects() {
+	text-decoration: underline;
+	color: @button-bg-color;
+	cursor: pointer;
+}
 
 
 
@@ -163,9 +176,7 @@ nav {
 		}
 
 		 &:hover {
-			text-decoration: underline;
-			color: @button-bg-color;
-			cursor: pointer;
+			.hover-effects;
 		}
 	}
 }
@@ -270,11 +281,7 @@ about-section
 	}
 
 	h2 {
-		font-size: @h2-fonts;
-		font-weight: 700;
-		color: @button-bg-color;
-		width: 96%;
-		margin: 0 auto;
+		.h2-props;
 	}
 
 	p {
@@ -313,11 +320,7 @@ skills-section
 	}
 
 	h2 {
-		font-size: @h2-fonts;
-		font-weight: 700;
-		color: @button-bg-color;
-		width: 96%;
-		margin: 0 auto;
+		.h2-props;
 	}
 
 	h3 {
@@ -334,8 +337,8 @@ skills-section
 		text-align: center;
 
 		&:hover {
-			color: @button-bg-color;
-			cursor: pointer;
+			.hover-effects;
+			text-decoration: none;
 		}
 	}
 }
@@ -375,10 +378,7 @@ work-history
 	}
 
 	h2 {
-		font-size: @h2-fonts;
-		font-weight: 700;
-		color: @button-bg-color;
-		width: 96%;
+		.h2-props;
 		margin: 15px auto;
 	}
 
@@ -440,11 +440,7 @@ contact-section
 	}
 
 	h2 {
-		font-size: @h2-fonts;
-		font-weight: 700;
-		color: @button-bg-color;
-		width: 96%;
-		margin: 0 auto;
+		.h2-props;
 	}
 
 	a li {
@@ -454,9 +450,7 @@ contact-section
 		margin: 15px auto;
 
 		&:hover {
-			text-decoration: underline;
-			color: @button-bg-color;
-			cursor: pointer;
+			.hover-effects;
 		}
 	}
 }
