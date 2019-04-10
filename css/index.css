@@ -321,7 +321,6 @@ skills-section
 .skills-section {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   margin: 20px auto;
   width: 900px;
   border-bottom: 1px solid #2C982A;
@@ -329,6 +328,11 @@ skills-section
 @media (max-width: 900px) {
   .skills-section {
     width: 90%;
+  }
+}
+@media (max-width: 868px) {
+  .skills-section {
+    flex-direction: column;
   }
 }
 @media (max-width: 500px) {
