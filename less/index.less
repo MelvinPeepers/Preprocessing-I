@@ -39,7 +39,9 @@ Variables
 
 @background-img-text-color: #262932;
 
+@h2-fonts: 24px;
 
+@section-width: 900px;
 
 /****************************************************
 *****************************************************
@@ -118,6 +120,7 @@ html, body {
 }
 
 
+
 /****************************************************
 *****************************************************
 
@@ -127,9 +130,19 @@ Header
 *****************************************************/
 
 header {
-	width: 900px;
+	width: @section-width;
 	height: 100px;
 	margin: 0 auto;
+
+	@media (max-width: 900px) {
+		width: 100%;
+		display: flex;
+		justify-content: space-around; 
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+	}
 }
 
 nav {
@@ -148,6 +161,7 @@ nav {
 
 		 &:hover {
 			text-decoration: underline;
+			color: @button-bg-color;
 			cursor: pointer;
 		}
 	}
@@ -166,13 +180,22 @@ top-content-bg-img
 
 .top-content {
 	background-color: @background-img-color;
-	width: 900px;
+	width: @section-width;
 	margin: 0 auto;
 	color: @background-img-text-color;
 	border-radius: 4px;
+
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+
 }
 
 .top-content-bg-img {
+
+	@media (max-width: 500px) {
+		text-align: center;
+	}
 
 	img {
 		max-width: 100%;
@@ -196,10 +219,18 @@ top-content-bg-img
 
 		button {
 			background-color: @button-bg-color;
-			color: @main-text-color;
 			margin: 0 0 20px 20px;
 			border-radius: 4px;
-			padding: 8px 32px;
+			padding: 12px 32px;
+
+			&:hover {
+				background-color: @background-img-text-color;
+			}
+			
+			a {
+				text-decoration: none;
+				color: @main-text-color;
+			}
 		}
 }
 
@@ -215,11 +246,27 @@ about-section
 .about-section {
 
 	margin: 20px auto;
-	width: 900px;
+	width: @section-width;
 	border-bottom: 1px solid @button-bg-color;
 
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+
+		h2 {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+
 	h2 {
-		font-size: 24px;
+		font-size: @h2-fonts;
 		font-weight: 700;
 		color: @button-bg-color;
 		width: 96%;
@@ -236,33 +283,47 @@ about-section
 /****************************************************
 *****************************************************
 
-eduction-section
+skills-section
 
 *****************************************************
 *****************************************************/
 
-.eduction-section {
+.skills-section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	margin: 20px auto;
-	width: 900px;
+	width: @section-width;
 	border-bottom: 1px solid @button-bg-color;
 
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+		text-align: center;
+	}
+
 	h2 {
-		font-size: 24px;
+		font-size: @h2-fonts;
 		font-weight: 700;
 		color: @button-bg-color;
 		width: 96%;
 		margin: 0 auto;
 	}
 
-	a li{
+	a {
 		text-decoration: none;
 		color: @main-text-color;
 		width: 96%;
 		margin: 15px auto;
+		flex-direction: column;
 
 		&:hover {
 			text-decoration: underline;
 			color: @button-bg-color;
+			cursor: pointer;
 		}
 	}
 }
@@ -279,12 +340,30 @@ work-history
 
 .work-history {
 	margin: 20px auto;
-	width: 900px;
+	width: @section-width;
 	padding-bottom: 20px;
 	border-bottom: 1px solid @button-bg-color;
 
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+
+		h2 {
+			text-align: center;
+		}
+
+		th {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+	}
+
 	h2 {
-		font-size: 20px;
+		font-size: @h2-fonts;
 		font-weight: 700;
 		color: @button-bg-color;
 		width: 96%;
@@ -304,7 +383,7 @@ work-history
 	}
 
 	tr {
-		width: 900px;
+		width: @section-width;
 	}
 
 	td {
@@ -329,25 +408,43 @@ contact-section
 
 .contact-section {
 	margin: 20px auto;
-	width: 900px;
+	width: @section-width;
 	padding-bottom: 20px;
 
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+
+		h2 {
+			text-align: center;
+		}
+
+		a li {
+			text-align: center;
+		}
+	}
+
 	h2 {
-		font-size: 24px;
+		font-size: @h2-fonts;
 		font-weight: 700;
 		color: @button-bg-color;
 		width: 96%;
 		margin: 0 auto;
 	}
 
-	a li{
+	a li {
 		text-decoration: none;
 		color: @main-text-color;
 		width: 96%;
 		margin: 15px auto;
 
 		&:hover {
+			text-decoration: underline;
 			color: @button-bg-color;
+			cursor: pointer;
 		}
 	}
 }
@@ -364,8 +461,12 @@ footer
 
 footer {
 	margin: 20px auto;
-	width: 900px;
+	width: @section-width;
 	text-align: center;
 	background-color: @button-bg-color;
 	padding: 20px;
+
+	@media (max-width: 900px) {
+		width: 90%;
+	}
 }

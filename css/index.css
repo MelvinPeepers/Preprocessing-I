@@ -186,6 +186,18 @@ header {
   height: 100px;
   margin: 0 auto;
 }
+@media (max-width: 900px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    width: 90%;
+  }
+}
 nav {
   display: flex;
   justify-content: flex-end;
@@ -201,6 +213,7 @@ nav a:last-child {
 }
 nav a:hover {
   text-decoration: underline;
+  color: #2C982A;
   cursor: pointer;
 }
 /****************************************************
@@ -216,6 +229,16 @@ top-content-bg-img
   margin: 0 auto;
   color: #262932;
   border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .top-content {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .top-content-bg-img {
+    text-align: center;
+  }
 }
 .top-content-bg-img img {
   max-width: 100%;
@@ -236,10 +259,16 @@ top-content-bg-img
 }
 .top-content-bg-img button {
   background-color: #2C982A;
-  color: #fff;
   margin: 0 0 20px 20px;
   border-radius: 4px;
-  padding: 8px 32px;
+  padding: 12px 32px;
+}
+.top-content-bg-img button:hover {
+  background-color: #262932;
+}
+.top-content-bg-img button a {
+  text-decoration: none;
+  color: #fff;
 }
 /****************************************************
 *****************************************************
@@ -252,6 +281,22 @@ about-section
   margin: 20px auto;
   width: 900px;
   border-bottom: 1px solid #2C982A;
+}
+@media (max-width: 900px) {
+  .about-section {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .about-section {
+    width: 90%;
+  }
+  .about-section h2 {
+    text-align: center;
+  }
+  .about-section p {
+    text-align: center;
+  }
 }
 .about-section h2 {
   font-size: 24px;
@@ -267,31 +312,47 @@ about-section
 /****************************************************
 *****************************************************
 
-eduction-section
+skills-section
 
 *****************************************************
 *****************************************************/
-.eduction-section {
+.skills-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 20px auto;
   width: 900px;
   border-bottom: 1px solid #2C982A;
 }
-.eduction-section h2 {
+@media (max-width: 900px) {
+  .skills-section {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .skills-section {
+    width: 90%;
+    text-align: center;
+  }
+}
+.skills-section h2 {
   font-size: 24px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
   margin: 0 auto;
 }
-.eduction-section a li {
+.skills-section a {
   text-decoration: none;
   color: #fff;
   width: 96%;
   margin: 15px auto;
+  flex-direction: column;
 }
-.eduction-section a li:hover {
+.skills-section a:hover {
   text-decoration: underline;
   color: #2C982A;
+  cursor: pointer;
 }
 /****************************************************
 *****************************************************
@@ -306,8 +367,25 @@ work-history
   padding-bottom: 20px;
   border-bottom: 1px solid #2C982A;
 }
+@media (max-width: 900px) {
+  .work-history {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .work-history {
+    width: 90%;
+  }
+  .work-history h2 {
+    text-align: center;
+  }
+  .work-history th {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .work-history h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
@@ -346,6 +424,22 @@ contact-section
   width: 900px;
   padding-bottom: 20px;
 }
+@media (max-width: 900px) {
+  .contact-section {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .contact-section {
+    width: 90%;
+  }
+  .contact-section h2 {
+    text-align: center;
+  }
+  .contact-section a li {
+    text-align: center;
+  }
+}
 .contact-section h2 {
   font-size: 24px;
   font-weight: 700;
@@ -360,7 +454,9 @@ contact-section
   margin: 15px auto;
 }
 .contact-section a li:hover {
+  text-decoration: underline;
   color: #2C982A;
+  cursor: pointer;
 }
 /****************************************************
 *****************************************************
@@ -375,4 +471,9 @@ footer {
   text-align: center;
   background-color: #2C982A;
   padding: 20px;
+}
+@media (max-width: 900px) {
+  footer {
+    width: 90%;
+  }
 }
