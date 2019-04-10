@@ -39,7 +39,7 @@ Variables
 
 @background-img-text-color: #262932;
 
-@h2-fonts: 24px;
+@h2-fonts: 28px;
 
 @section-width: 900px;
 
@@ -50,6 +50,8 @@ Mixins
 
 *****************************************************
 *****************************************************/
+
+
 
 
 // Is this working?
@@ -149,6 +151,7 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 20px;
+	font-weight: 700;
 
 	a {
 		padding-right: 45px;
@@ -205,7 +208,7 @@ top-content-bg-img
 	}
 
 		h1 {
-			font-size: 32px;
+			font-size: 36px;
 			font-weight: 700;
 			width: 96%;
 			margin: 0 auto;
@@ -222,6 +225,7 @@ top-content-bg-img
 			margin: 0 0 20px 20px;
 			border-radius: 4px;
 			padding: 12px 32px;
+			font-size: 18px;
 
 			&:hover {
 				background-color: @background-img-text-color;
@@ -313,15 +317,20 @@ skills-section
 		margin: 0 auto;
 	}
 
+	h3 {
+		text-align: center;
+		margin-top: 20px;
+	}
+
 	a {
 		text-decoration: none;
 		color: @main-text-color;
 		width: 96%;
 		margin: 15px auto;
 		flex-direction: column;
+		text-align: center;
 
 		&:hover {
-			text-decoration: underline;
 			color: @button-bg-color;
 			cursor: pointer;
 		}

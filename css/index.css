@@ -202,6 +202,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+  font-weight: 700;
 }
 nav a {
   padding-right: 45px;
@@ -247,7 +248,7 @@ top-content-bg-img
   border-radius: 4px;
 }
 .top-content-bg-img h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   width: 96%;
   margin: 0 auto;
@@ -262,6 +263,7 @@ top-content-bg-img
   margin: 0 0 20px 20px;
   border-radius: 4px;
   padding: 12px 32px;
+  font-size: 18px;
 }
 .top-content-bg-img button:hover {
   background-color: #262932;
@@ -299,7 +301,7 @@ about-section
   }
 }
 .about-section h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
@@ -336,11 +338,15 @@ skills-section
   }
 }
 .skills-section h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
   margin: 0 auto;
+}
+.skills-section h3 {
+  text-align: center;
+  margin-top: 20px;
 }
 .skills-section a {
   text-decoration: none;
@@ -348,9 +354,9 @@ skills-section
   width: 96%;
   margin: 15px auto;
   flex-direction: column;
+  text-align: center;
 }
 .skills-section a:hover {
-  text-decoration: underline;
   color: #2C982A;
   cursor: pointer;
 }
@@ -385,7 +391,7 @@ work-history
   }
 }
 .work-history h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
@@ -441,7 +447,7 @@ contact-section
   }
 }
 .contact-section h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #2C982A;
   width: 96%;
